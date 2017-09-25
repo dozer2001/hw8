@@ -59,3 +59,126 @@
     }
   }
 }
+
+
+//Color Tabs
+
+.tab-color{
+  display: flex;
+  .color-tab{
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 20px;
+      padding: 12px 18px;
+       display: flex;
+
+    .circle{
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+
+    }
+
+      i{
+        font-size: 16px;
+        font-family: $fontFamily;
+        padding-left: 15px;
+        color: $gray
+      }
+  }
+  .tab-hover{
+    &:hover{
+      background-color: $lightGray;
+    }
+  }
+}
+
+// table
+
+.table{
+  border-collapse: collapse;
+  font-size: $tableFontSize;
+
+  tbody {
+
+    tr{
+
+      &:hover {
+        background-color: $tableTrHover;
+      }
+
+    }
+
+  }
+
+    tr{
+
+
+      th{
+      padding: 30px 18px;
+      color: $gray;
+     }
+
+       td{
+        padding: 18px;
+        border-top: 1px solid $lightGray;
+        font-size: $tableFontSize;
+
+        &.td-title{
+          font-size: 16px;
+          color: $gray;
+        }
+       }
+    }
+
+
+  .table-sort{
+    color: $gray;
+    padding: 8px 10px;
+    margin: -8px -10px;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $xsLightGray;
+      color: $black;
+    }
+
+  }
+
+}
+
+//input
+.guide-wrap{
+
+  .input-styles{
+    border: 1px solid $lightGray;
+    height: 122px;
+    width: 155px;
+    padding-bottom: 57px;
+    padding-left: 18px;
+  }
+  .input-hover{
+    &:hover{
+      border: 1px solid $darkGray;
+      cursor: pointer;
+    }
+
+  }
+  .input-small{
+    width: 158px;
+    height: 40px;
+    border: 1px solid $lightGray;
+    padding: 17px 10px;
+    }
+  .input-disabled{
+    border-color: red;
+    &:hover{
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+
+
