@@ -2,16 +2,22 @@
 //title
 %title{
   color: $titleColor;
-  font-size: 16px;
+  font-size: $titleFontSize;
   font-weight: $fontBold;
 }
 
 .section-title{
   @extend  %title;
-}
-.page-title{
+  }
+
+.page-title {
   @extend %title;
   text-transform: uppercase;
+
+  .small-title {
+    font-size: $smallTitleFontSize;
+  }
+
 }
 // links
 .link{
@@ -177,8 +183,128 @@
       cursor: not-allowed;
     }
   }
-
 }
 
+// container
+.container-fluid{
+  padding: $defaultIndent;
+}
+
+//header
+.header{
+  background-color: #ffffff;
+  border-bottom: 1px solid $lightGray;
+  right: 0;
+  left: 0;
+
+  .user-control{
+    
+    .user-price{
+
+      p{
+        color: $gray;
+        font-family: $userPriceFontFamely;
+        font-size: 20px;
+        padding: $headerPadding;
+
+      }
+    }
+    .user-bell{
+
+      padding: $headerPadding;
+    }
+    .user-name{
+      p{
+        font-size: 13px;
+        color: $userBellColor;
+        padding: $headerPadding;
+        font-family: $userNameFontFamely;
+      }
+    }
+    .user-exit{
+
+      padding: $headerPadding;
+    }
+  }
+}
+
+// aside
+.aside{
+  background-color: $asideBg;
+  width: $asideWidth;
+  height: 100vh;
+  left: 0;
+  z-index: 100;
+  .menu-control{
+    padding: $defaultIndent;
+
+    .menu-btn{
+      cursor: pointer;
+      span{
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $darkGray;
+
+        & + span{
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .aside-menu{
+
+    ul{
+
+      li{
+        color: $darkGray;
+
+        a{
+          display: block;
+          padding: 14px;
+          border-left: 4px solid transparent;
+
+          &:hover{
+            background-color: #282828;
+            color: #ffffff;
+            border-left-color: $orange;
+          }
+        }
+      }
+    }
+  }
+  .your-manager{
+    padding: 27px $defaultIndent 0;
+    border-top: $darkGray;
+
+    .manager-info{
+      margin-top: $defaultIndent;
+
+      .manager-photo{
+        position: relative;
+        margin-right: 10px;
+
+        .status{
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          &.online{
+            background-color: $green;
+          }
+          &.offline{
+            background-color: $red;
+          }
+        }
+      }
+    }
+
+
+  }
+}
 
 
